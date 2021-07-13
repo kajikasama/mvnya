@@ -56,7 +56,7 @@ btnSearch.addEventListener("click", async function () {
 });
 
 function getMovies(keyWord) {
-  return fetch("http://www.omdbapi.com/?&apikey=790c7aa&s=" + keyWord)
+  return fetch("https://www.omdbapi.com/?&apikey=790c7aa&s=" + keyWord)
     .then((res) => {
       if (!res.ok) {
         throw new Error(res.statusText);
@@ -72,7 +72,7 @@ function getMovies(keyWord) {
 }
 
 function getDetailMovies(imdbId) {
-  return fetch("http://www.omdbapi.com/?&apikey=790c7aa&i=" + imdbId)
+  return fetch("https://www.omdbapi.com/?&apikey=790c7aa&i=" + imdbId)
     .then((res) => res.json())
     .then((res) => res);
 }
